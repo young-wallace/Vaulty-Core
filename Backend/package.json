@@ -4,9 +4,9 @@
   "description": "The Vaulty backend powers the platform's off-chain infrastructure, providing secure APIs, authentication, banking integrations, notifications, analytics, and communication with Stellar smart contracts.",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
+    "dev": "node api.js && nodemon --exec ts-node src/server.ts",
+    "build": "node api.js && tsc",
+    "start": "node api.js && node dist/server.js",
     "test": "jest",
     "test:integration": "jest --testPathPattern=integration",
     "test:e2e": "jest --testPathPattern=e2e",
